@@ -29,7 +29,6 @@ get_temp <- function(ext) {
 
 
 #' Read a Jkl file (parent sets cache) 
-#' @export
 read.jkl <- function(path, data) {
     check_data(data)
 
@@ -66,7 +65,6 @@ close(con)
 }
 
 #' Write a Jkl file (parent sets cache) 
-#' @export
 write.jkl <- function(path, jkl, data) {
     check_data(data)
 
@@ -122,7 +120,6 @@ close(con)
 
 
 #' Read a res file for bnlearn loading
-#' @export
 read.str <- function(path, data) {
     check_data(data)
 

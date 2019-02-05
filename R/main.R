@@ -15,6 +15,10 @@
 #' @param cores Number of machine cores to use. If 0, all are used. (default: 1)
 #' @param verbose Verbose level (default: 0)
 #' @return The learned Bayesian network in the bnlearn format.
+#'
+#' @examples
+#' bn <- blip.learn(read.table('data/child-5000.dat', sep = ' '), time = 10)
+#'
 #' @export
 blip.learn <- function(dat, scorer.method="is", solver.method="winasobs", indeg=6, time=3600, allocated=80, scorefunction="bic", alpha=1.0, cores=1, verbose=0) {
 

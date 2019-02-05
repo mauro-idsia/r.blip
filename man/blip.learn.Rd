@@ -39,3 +39,7 @@ Fully learns a Bayesian networks.
 The input data is required to be complete and discrete. 
 Accordingly missing values in the input data.frame will be ignored, and all numeric values will be converted to integers.
 }
+\examples{
+bn <- blip.learn(read.table('data/child-5000.dat', sep = ' '), time = 10)
+
+}
