@@ -40,7 +40,7 @@ blip.learn <- function(dat, scorer.method="is", solver.method="winasobs", indeg=
     # WRITE INPUT
     dat_path <- get_temp_arff()
     write.arff(dat, dat_path)
-     cat("... writing arff file (temp file:", dat_path, ")\n")
+    # cat("... writing arff file (temp file:", dat_path, ")\n")
 
     # EXECUTE PSE
     scorer.time = floor(time * allocated / 100.0 )
@@ -48,7 +48,7 @@ blip.learn <- function(dat, scorer.method="is", solver.method="winasobs", indeg=
     
     jkl <- read.jkl(jkl_path, dat)
     loc <- get_temp_jkl()
-    cat("... writing jkl complete (temp file:", loc, ")\n")
+    # cat("... writing jkl complete (temp file:", loc, ")\n")
     write.jkl.names(loc, jkl)
 
     # EXECUTE SO
@@ -171,7 +171,6 @@ blip.scorer <- function(dat, method="is", indeg=6, time=3600, scorefunction="bic
     return(jkl)
 }
 
-#' @export
 blip.scorer.int <- function(dat_path, method, indeg, time, scorefunction, alpha, cores, verbose) {
 
     jkl_path <- get_temp_jkl()

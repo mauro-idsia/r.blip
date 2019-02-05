@@ -33,7 +33,7 @@ get_temp <- function(ext) {
 read.jkl <- function(path, data) {
     check_data(data)
 
-    print(path)
+#     print(path)
     con  <- file(path, open = "r")
     ln <- readLines(con, n=1)
     while (grepl("^[#]", ln, perl=T))

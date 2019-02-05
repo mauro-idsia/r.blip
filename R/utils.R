@@ -59,7 +59,6 @@ illegal <- function(x) {
  return(grepl("[,]", x, perl=T))
 }
 
-#' @export      
 check_data <- function(x) {
 
  if(!is.data.frame(x))
